@@ -9,12 +9,13 @@ import TransportWebUSB from "@ledgerhq/hw-transport-webusb"
 import TransportWebHID from "@ledgerhq/hw-transport-webhid"
 
 //Display the header in the div which has the ID "main"
-const initial = "<h1>Connect your Nano and open the Bitcoin app. Click anywhere to start...</h1>"
+const initial =
+  "<h1>Connect your Nano and open the Cosmos app.</h1><br><button id='button'>Connect Wallet</button><br><br>"
 const $main = document.getElementById("main")
 const path = [44, 118, 0, 0, 0]
 $main.innerHTML = initial
 
-document.body.addEventListener("click", async () => {
+document.getElementById("button").addEventListener("click", async () => {
   $main.innerHTML = initial
   try {
     //trying to connect to your Ledger device with USB protocol
@@ -34,7 +35,6 @@ document.body.addEventListener("click", async () => {
     if (response.return_code !== 36864) {
       throw response
     } else {
-      console.log(response)
       const h2 = document.createElement("h2")
       h2.textContent = response.bech32_address
       $main.innerHTML = "<h1>Your first Band address:</h1>"

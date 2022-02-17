@@ -1,0 +1,28 @@
+{
+  "name": "bandchainjs-ledger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build",
+    "start": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ledgerhq/hw-app-btc": "^6.24.1",
+    "@ledgerhq/hw-transport-webhid": "^6.24.1",
+    "@ledgerhq/hw-transport-webusb": "^6.24.1",
+    "@ledgerhq/logs": "^6.10.0",
+    "core-js": "^3.21.1",
+    "ledger-cosmos-js": "^2.1.8"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "parcel": "^2.3.0",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0"
+  },
+  "description": ""
+}
